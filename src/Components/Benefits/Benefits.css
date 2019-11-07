@@ -1,0 +1,163 @@
+
+#benefits {
+
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(to top right, #78aa4a 56%, #99ff66 114%);
+  }
+  
+  .benefits_header h2{
+  
+    color: #ffffff;
+  
+  }
+  
+  .points {
+    display: flex;
+    flex-direction: row;
+    
+  }
+  
+  .points article{
+  
+    margin-left: auto;
+    margin-right: auto;
+  
+  
+  }
+  
+  article  p , a {
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  article h3 {
+    color: #fff;
+    font-weight: 200;
+    text-align: left;
+  }
+  
+  article button {
+    width: 119px;
+    height: 47px;
+    border-radius: 40px;
+    background-color: rgb(255, 255, 255, 0) ;
+    border-width: 1px;
+    border-color: #ffffff;
+    font-size: 0.9em;
+    font-weight: 400;
+    line-height: 1em;
+    padding: 5px;
+    color: #ffffff;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  
+    
+  
+  }
+  
+  article  button:hover {
+    background-color: white; 
+    color:#78AA4A;
+  }
+
+  @media only screen and (min-width: 300px) and (max-width: 750px) {
+
+    .points {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+         margin-right: 15px;
+     }
+  
+    
+  
+     article h3 {
+        color: #fff;
+        font-weight: 300;
+        text-align: center;
+    }
+  
+    article  p  {
+        color: #ffffff;
+        text-align: center;
+    }
+  
+  
+    article button {
+        width: 150px;
+        height: 47px;
+        border-radius: 40px;
+        background-color: rgb(255, 255, 255, 0) ;
+        border-width: 1px;
+        border-color: #ffffff;
+        font-size: 1.5em;
+        font-weight: 400;
+        line-height: 1em;
+        padding: 5px;
+        color: #ffffff;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+    
+        
+    
+    }
+
+  }
+
+
+  @media only screen and (min-width: 751px) and (max-width: 1190px) {
+
+    .points {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+        margin-right: 15px;
+     }
+  
+    
+  
+     article h3 {
+        color: #fff;
+        font-weight: 300;
+        text-align: center;
+    }
+  
+    article  p  {
+        color: #ffffff;
+        text-align: center;
+    }
+  
+  
+    article button {
+        width: 200px;
+        height: 62px;
+        border-radius: 40px;
+        background-color: rgb(255, 255, 255, 0) ;
+        border-width: 1px;
+        border-color: #ffffff;
+        font-size: 1.5em;
+        font-weight: 300;
+        line-height: 1em;
+        padding: 5px;
+        color: #ffffff;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+    
+        
+    
+    }
+  
+
+  }

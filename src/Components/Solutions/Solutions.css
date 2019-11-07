@@ -1,0 +1,168 @@
+
+#solutions {
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;  
+  }
+  
+  .tag h4{
+     color: black;
+  }
+  .products {
+  
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .item {
+    max-height: 260px;
+    max-width: 260px;
+    padding: 12px;
+    margin: 20px;
+    
+   
+  }
+  
+  .card {
+    background-color: #78AA4A;
+    padding: 15px;
+    box-shadow: 5px 5px 80px grey;
+  }
+  
+  .card img {
+  
+    width: 80px;
+    height: 80px;    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+  
+  .card button {
+  
+    width: 76px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255, 0) ;
+    border-width: 1px;
+    border-color: #ffffff;
+    font-size: 0.9em;
+    font-weight: 400;
+    line-height: 1em;
+    padding: 5px;
+    color: #ffffff;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+  
+  }
+  
+  .card button:hover {
+    background-color: white; 
+    color:#78AA4A;
+  }
+
+
+  @media only screen and (min-width: 300px) and (max-width: 750px) {
+    .products {
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+     }
+  
+     .item {
+        max-height: 260px;
+        max-width: 260px;
+        padding: 12px;
+        
+    
+        
+       
+     }
+    
+    .card {
+        background-color: #78AA4A;
+        padding: 15px;
+        box-shadow: 5px 5px 80px grey;
+     }
+  
+     .card button {
+  
+        width: 86px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: rgb(255, 255, 255, 0) ;
+        border-width: 1px;
+        border-color: #ffffff;
+        font-size: 1.2em;
+        font-weight: 400;
+        line-height: 1em;
+        padding: 5px;
+        color: #ffffff;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+    
+     }
+  
+  
+  }
+
+
+  @media only screen and (min-width: 751px) and (max-width: 1190px) {
+
+    .products {
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+     }
+  
+     .item {
+        max-height: 460px;
+        max-width: 700px;
+        padding: 12px;  
+     }
+  
+  
+    
+    
+    .card {
+        background-color: #78AA4A;
+        padding: 15px;
+        box-shadow: 5px 5px 80px grey;
+     }
+  
+     .card button {
+  
+        width: 129px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: rgb(255, 255, 255, 0) ;
+        border-width: 1px;
+        border-color: #ffffff;
+        font-size: 1.2em;
+        font-weight: 400;
+        line-height: 1em;
+        padding: 5px;
+        color: #ffffff;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+    
+     }
+  
+
+
+  }
+  

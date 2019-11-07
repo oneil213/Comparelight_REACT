@@ -1,0 +1,103 @@
+#Register {
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+    padding-top: 96px;
+    padding-bottom: 96px;
+  
+  
+  }
+   
+  
+  #Register button {
+    width: 353px;
+    height: 66px;
+    border-radius: 40px;
+    background-color: #78AA4A;
+    border: none;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1em;
+    padding: 5px;
+    color: #ffffff;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: px;
+  
+  
+  }
+
+  @media only screen and (min-width: 300px) and (max-width: 750px) {
+
+    #Register {
+        display: flex;
+        flex-direction: column;
+        background-color: #F2F2F2;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    
+    
+    }
+       
+    
+    #Register button {
+        width: 253px;
+        height: 66px;
+        border-radius: 40px;
+        background-color: #78AA4A;
+        border: none;
+        font-size: 1.5em;
+        font-weight: 400;
+        line-height: 1em;
+        padding: 5px;
+        color: #ffffff;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: px;
+    
+    
+    }
+  
+
+  }
+
+
+  @media only screen and (min-width: 751px) and (max-width: 1190px) {
+
+    #Register {
+        display: flex;
+        flex-direction: column;
+        background-color: #F2F2F2;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    
+    
+    }
+       
+    
+    #Register button {
+        width: 253px;
+        height: 66px;
+        border-radius: 40px;
+        background-color: #78AA4A;
+        border: none;
+        font-size: 1.5em;
+        font-weight: 300;
+        line-height: 1em;
+        padding: 5px;
+        color: #ffffff;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: px;
+    
+    
+    }
+  
+
+  }
