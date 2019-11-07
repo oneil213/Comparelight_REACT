@@ -1,0 +1,157 @@
+.top_menu {
+    display: block;
+    flex-direction: row;
+}
+
+.logo {
+    float: left;
+}
+
+
+.logo img{
+  max-width: 150px;
+  max-height: 143px;
+  margin-top: 15%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  float: right;
+}
+
+.login button{
+  width: 119px;
+  height: 47px;
+  margin-top: 30%;
+  margin-right: 20px;
+  border-radius: 40px;
+  background-color: rgb(255, 255, 255, 0) ;
+  border-width: 1px;
+  border-color: #ffffff;
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1em;
+  padding: 5px;
+  color: #ffffff;
+  text-align: center;
+
+}
+
+.login button:hover {
+  background-color: white; 
+  color:#78AA4A;
+}
+
+
+.signup button{
+  width: 119px;
+  height: 47px;
+  margin-top: 30%;
+  margin-right: 20px;
+  border: none;
+  border-radius: 40px;
+  background-color: #78AA4A;
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1em;
+  padding: 5px;
+  color: #ffffff;
+  text-align: center;
+
+}
+
+.signup button:hover {
+  background-color: rgba(45, 178, 59, 0.7); 
+}
+
+
+
+@media only screen and (min-width: 300px) and (max-width: 750px) {
+    .logo img{
+        max-width: 75px;
+        max-height: 72px;
+      }
+  
+      
+  
+  
+  
+    .login button{
+        width: 80px;
+        height: 32px;
+        margin-top: 30%;
+        margin-right: 13px;
+        border-radius: 27px;
+        font-size: 1.2em;
+        font-weight: 400;
+        line-height: 1.2em;
+        padding: 5px;
+        color: #ffffff;
+        text-align: center;
+    
+     }
+  
+  
+    .signup button{
+  
+        width: 80px;
+        height: 32px;
+        margin-top: 30%;
+        margin-right: 13px;
+        border-radius: 27px;
+        font-size: 1.2em;
+        font-weight: 400;
+        line-height: 1.2em;
+        padding: 5px;
+        color: #ffffff;
+        text-align: center;
+    
+     }
+}
+
+
+@media only screen and (min-width: 751px) and (max-width: 1190px) {
+
+  .logo img{
+    max-width: 120px;
+    max-height: 114px;
+  }
+
+  
+
+
+
+.login button{
+    width: 120px;
+    height: 64px;
+    margin-top: 30%;
+    margin-right: 13px;
+    border-radius: 27px;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.2em;
+    padding: 5px;
+    color: #ffffff;
+    text-align: center;
+
+ }
+
+
+.signup button{
+
+    width: 120px;
+    height: 64px;
+    margin-top: 30%;
+    margin-right: 13px;
+    border-radius: 27px;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.2em;
+    padding: 5px;
+    color: #ffffff;
+    text-align: center;
+
+ }
+
+}
