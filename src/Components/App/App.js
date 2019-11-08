@@ -1,36 +1,53 @@
-import React from 'react';
-import './App.css';
-import Footer from '../Footer/Footer';
-import Scroller from '../Scroller/Scroller';
-import Information from '../Information/Information';
-import Solutions from '../Solutions/Solutions';
-import Benefits from '../Benefits/Benefits';
-import Register from '../Register/Register';
-import Welcome from '../Welcome/Welcome';
-import TopMenu from '../TopMenu/TopMenu';
-
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from '../Home/Home';
+import SignUp from '../SignUp/SignUp';
+import LogIn from '../Login/Login';
 
 class App extends React.Component {
   render() {
-    return ( 
-    <div>
-        <div id="landing">
-            <div className="landing_container">
-              <TopMenu />
-              <Welcome />
-              <Scroller />
-            </div>
-        </div>
-        <Information />
-        <Solutions />
-        <Benefits />
-        <Register />
-        <Footer />
-    </div>
-      
+    return (
+      <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            
+            <li>
+              <Link to="/login">LogIn</Link>
+            </li>
+            <li>
+              <Link to="/signup">Sign Up</Link>
+            </li>
+            
+          </ul>
+        </nav>
 
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/login">
+            <LogIn />
+          </Route>
+          <Route path="/signup">
+            <SignUp />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
     )
   }
 }
 
 export default App;
+

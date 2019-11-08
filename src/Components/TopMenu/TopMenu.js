@@ -1,9 +1,7 @@
 import React from 'react';
 import './TopMenu.css';
 import logo from './Images/logo header.png';
-
-
-
+import { NavLink,} from 'react-router-dom';
 
 
 
@@ -16,17 +14,27 @@ class TopMenu extends React.Component {
 
         <div className="top_menu">
                     <div className="logo">
-                        <img src={logo} alt="Comparelight logo"/></div>
-                        <div className="menu">
-                            <div className="login"><button>Log In</button></div>
-                            <div className="signup"><button>Sign Up</button></div>
-                            </div>
-                            </div>
+                       <NavLink to='../App/App'><img src={logo} alt="Comparelight logo"/></NavLink>
+                    </div>
+                    <div className="menu">
+                      <div className="login">
+                        <NavLink to='../Login/Login'><button>Log In</button></NavLink>
+                      </div>
+                      <div className="signup">
+                        <NavLink to='../SignUp/SignUp'><button>Sign Up</button></NavLink>
+                      </div>
+                    </div>
+        </div>
+
+
 
       )
     }
   }
 
+  
+
+  
 
 
 

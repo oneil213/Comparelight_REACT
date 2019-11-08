@@ -1,6 +1,11 @@
 
 
-
+.App{
+  font-family: Roboto, sans-serif;
+  background-color: #E6A74E;
+  font-size: 16px;
+  line-height: 1px;
+}
 body {
   font-family: Roboto, sans-serif;
   background-color: #E6A74E;
