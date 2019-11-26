@@ -33,7 +33,7 @@ class Footer extends React.Component {
     <img src="https://res.cloudinary.com/dfszquucy/image/upload/v1572870060/Comparelight/App/twitter_tqxxx3.png" alt="Comparelight Twitter profile" />
     <img src="https://res.cloudinary.com/dfszquucy/image/upload/v1572870059/Comparelight/App/facebook_e0jtej.png"  alt="Comparelight Facebook profile"/>
 </div>
-<div class="address">
+<div className="address">
     <h4>13/15, Manchester Road, GRA, Zaria,<br/>Kaduna State.</h4>
 </div>
 </div>

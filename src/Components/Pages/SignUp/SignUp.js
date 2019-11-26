@@ -1,12 +1,30 @@
 import React from 'react';
 import './SignUp.css';
-import TopMenu from '../TopMenu/TopMenu';
+import TopMenu from '../../TopMenu/TopMenu';
 
 
 
 
 class SignUp extends React.Component {
+    state = {
+        phoneNumber: null,
+    }
+    componentDidMount = async () => {
+        this.setState({phoneNumber:this.props.match.params.contact || ""})
+    }
+    setPhone(event){
+        this.setState({ PhoneNumber: event.curr.value })
+    }
+    register(){
+        alert("register succesfiully")
+    }
+    handlePhone = (event) =>{
+        this.setState({ phoneNumber: event.currentTarget.value })
+
+    }
+
     render() {
+        const {phoneNumber} = this.state;
         return (
         <div class="container">
             <div class="underlay">
@@ -20,8 +38,10 @@ class SignUp extends React.Component {
 
             <div class="reg_form">
 
-                        <input type="number" name="Phone Number"  maxlength="11" placeholder="Enter your Phone Number" autocomplete="on" autofocus required />
-                        <input type="text" name="FirstName" placeholder="Enter your First Name" autocomplete="on" required />
+                        {/* <input type="number" value={phoneNumber} onChange={this.handlePhone} placeholder="Enter your Phone Number" required /> */}
+                        <input type="number" name="Phone Number" value={phoneNumber} onChange={this.handlePhone.bind(this)} maxlength="11" placeholder="Enter your Phone Number" autocomplete="on" required />
+                        {/* <input type="number" name="Phone Number" value={this.state.phoneNumber} onChange={this.setPhone.bind(this)} maxlength="11" placeholder="Enter your Phone Number" autocomplete="on" autofocus required /> */}
+                        <input type="text" name="FirstName" placeholder="Enter your First Name"  required />
                        
                         <input type="text" name="LastName"  placeholder="Enter your Last Name" autocomplete="on" required />
                         
@@ -34,7 +54,7 @@ class SignUp extends React.Component {
                             <option value="canada">Eko Electric</option>
                             <option value="usa">ADEC</option>
                         </select>
-                        <button>Continue</button>
+                        <button onClick={this.register.bind(this)}>Continue</button>
 
 
                 </div>
