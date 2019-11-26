@@ -10,7 +10,12 @@
   
   .benefits_header h2{
   
+    font-size: 2.8em;
+    font-weight: 100;
+    line-height: 1.2em;
+    padding: 50px;
     color: #ffffff;
+    text-align: center;
   
   }
   

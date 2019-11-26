@@ -1,7 +1,21 @@
+
+
+
+#Register h2{
+  font-size: 2.8em;
+    font-weight: 100;
+    line-height: 1.2em;
+    padding: 50px;
+    color:  #E6A74E;
+    text-align: center;
+
+}
+
 #Register {
     display: flex;
     flex-direction: column;
     background-color: #F2F2F2;
+    background-image: url(https://res.cloudinary.com/dfszquucy/video/upload/v1566223670/samples/elephants.mp4);
     padding-top: 96px;
     padding-bottom: 96px;
   

@@ -1,4 +1,19 @@
 
+
+#solutions h2{
+   font-size: 2.8em;
+    font-weight: 100;
+    line-height: 1.2em;
+    padding: 50px;
+    color: #78AA4A;
+    text-align: center;
+}
+
+#solutions h4{
+  
+    color: #78AA4A;
+ 
+}
 #solutions {
     display: flex;
     flex-direction: column;
