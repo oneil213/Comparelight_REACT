@@ -1,28 +1,22 @@
 import React from 'react';
 import './PhoneNumber.css';
-import { NavLink,} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class PhoneNumber extends React.Component {
     state = {
-        PhoneNumber: null,
+        phoneNumber: null,
     }
-    savePhone(event) {
-        this.setState({ PhoneNumber: event.target.value })
+    savePhone = (event) => {
+        this.setState({ phoneNumber: event.target.value })
     }
-    
+
     render() {
-        const {PhoneNumber} = this.state;
+        const { phoneNumber } = this.state;
         return (
-
             <div className="phonebar">
-
-
-                <input type="number" value={this.state.PhoneNumber} onChange={this.savePhone.bind(this)} min="0" max="9" placeholder="Enter your phone number" />
-                
-                <NavLink to={`../SignUp/${PhoneNumber}`}  ><button className="PhoneButton">Continue</button></NavLink>
-
+                <input type="number" value={phoneNumber} onChange={this.savePhone} min="0" max="9" placeholder="Enter your phone number" />
+                <NavLink to={`../SignUp/${phoneNumber}`}  ><button className="PhoneButton">Continue</button></NavLink>
             </div>
-
         )
     }
 }
