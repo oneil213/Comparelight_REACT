@@ -33,6 +33,8 @@ body h3 {
     font-size: 2.5em;
     font-weight: 700;
     line-height: 1.2em;
+    margin-top: 0px;
+    margin-bottom: 10px;
     color: black;
     text-align: center;
 
@@ -43,7 +45,8 @@ body h4{
     font-size: 1.5em;
     font-weight: 300;
     line-height: 1.2em;
-    margin-bottom: 10px;
+    margin-top: 0px;
+    
   
     color: #4D4D4D;
     text-align: center;
@@ -178,11 +181,10 @@ body h6{
   }
 
   .data_content {
-      margin-top: 30px;
-      margin-bottom: 30px;
+      margin-top: 5px;
+      margin-bottom: 5px;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
       align-items: center;
   }
 
