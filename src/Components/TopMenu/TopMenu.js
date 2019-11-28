@@ -23,6 +23,12 @@ class TopMenu extends React.Component {
                     <div className="login">
                       <NavLink to='/Pages/Dashboard'><button>Dashboard</button></NavLink>
                     </div>
+                    <div className="login">
+                      <NavLink to='/Pages/Recharge'><button>Recharge</button></NavLink>
+                    </div>
+                    <div className="login">
+                      <NavLink to='/Pages/Data'><button>Data</button></NavLink>
+                    </div>
                     <div className="signup">
                         <NavLink to='../SignUp/SignUp'><button>Sign Up</button></NavLink>
                       </div>

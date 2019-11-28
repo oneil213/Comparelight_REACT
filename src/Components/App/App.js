@@ -3,36 +3,21 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Home from '../Pages/Home/Home';
 import SignUp from '../Pages/SignUp/SignUp';
 import LogIn from '../Pages/Login/Login';
 import Dashboard from '../Pages/Dashboard/Dashboard';
+import Recharge from '../Pages/Recharge/Recharge';
+import Data from '../Pages/Data/Data';
+
 
 class App extends React.Component {
   render() {
     return (
       <Router>
         <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-
-              <li>
-                <Link to="/Pages/Login">LogIn</Link>
-              </li>
-              <li>
-                <Link to="/Pages/Dashboard">Dashboard</Link>
-              </li>
-              <li>
-                <Link to="/SignUp">Sign Up</Link>
-              </li>
-
-            </ul>
-          </nav>
+         
 
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
@@ -46,6 +31,12 @@ class App extends React.Component {
             </Route>
             <Route path="/Pages/Dashboard">
               <Dashboard />
+            </Route>
+            <Route path="/Pages/Data">
+              <Data />
+            </Route>
+            <Route path="/Pages/Recharge">
+              <Recharge />
             </Route>
             <Route path="/">
               <Home />
