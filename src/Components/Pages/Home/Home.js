@@ -10,6 +10,7 @@ import Welcome from '../../Welcome/Welcome';
 import TopMenu from '../../TopMenu/TopMenu';
 
 
+
 class Home extends React.Component
  {
 
@@ -19,8 +20,8 @@ class Home extends React.Component
 
   render() {
     return ( 
+    
     <div>
-
         <div id="landing">
             <div className="landing_container">
               <TopMenu />
@@ -28,6 +29,7 @@ class Home extends React.Component
               <Scroller />
             </div>
         </div>
+  
         <Information />
         <Solutions />
         <Benefits />

@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+
 import Home from '../Pages/Home/Home';
 import SignUp from '../Pages/SignUp/SignUp';
 import LogIn from '../Pages/Login/Login';
@@ -15,6 +16,10 @@ import Data from '../Pages/Data/Data';
 class App extends React.Component {
   render() {
     return (
+  
+       
+    
+   
       <Router>
         <div>
          
@@ -25,8 +30,8 @@ class App extends React.Component {
             <Route path="/Pages/Login">
               <LogIn />
             </Route>
-            <Route path="/SignUp/:contact" component={SignUp} />
-            <Route path="/signup">
+           
+            <Route path="/Pages/SignUp">
               <SignUp />
             </Route>
             <Route path="/Pages/Dashboard">
@@ -44,6 +49,7 @@ class App extends React.Component {
           </Switch>
         </div>
       </Router>
+  
     )
   }
 }
