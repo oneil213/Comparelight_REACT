@@ -1,12 +1,19 @@
 import React from 'react';
 import './PhoneNumber.css';
-import { NavLink } from 'react-router-dom';
+import {Redirect } from 'react-router-dom';
 
 
 class PhoneNumber extends React.Component {
+
+     
+
     state = {
         phoneNumber: null,
+        redirect: false
+      
     }
+
+
 
     handleChange = (event) => {
         
@@ -16,24 +23,46 @@ class PhoneNumber extends React.Component {
         this.setState({ [input.name]: value });
     }
 
-    handleFormSubmit = () => {
+
+    setRedirect = () => {
+        this.setState({
+          redirect: true
+        })
         const {phoneNumber} = this.state;
         localStorage.setItem("phoneNumber", phoneNumber);
-    };
+      }
 
+  
+      renderRedirect = () => {
+        if (this.state.redirect) {
+          return <Redirect to= "/Pages/SignUp" />
+        }
+        
+      }
+      
+
+
+    
+
+    
     
     
 
     render() {
     
         return (
-          <form  onSubmit={this.handleFormSubmit}>
+            <div>
+                 {this.renderRedirect()}
+            
+          <form  >
               <div className="phonebar">
                 <input type="number" name="phoneNumber" value={this.state.phoneNumber} onChange={this.handleChange}  placeholder="Enter your phone number"  required/>
-                <NavLink to={`../Pages/SignUp/`}  > <button className="PhoneButton" type="submit">Continue</button></NavLink>
+            <button className="PhoneButton" type="submit" onClick={this.setRedirect}>Continue</button>
+            
             </div>
 
           </form>  
+          </div>
             
         )
     }

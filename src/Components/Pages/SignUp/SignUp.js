@@ -1,12 +1,15 @@
 import React from 'react';
+import {Redirect } from 'react-router-dom';
 import './SignUp.css';
 import TopMenu from '../../TopMenu/TopMenu';
-import { NavLink } from 'react-router-dom';
+
 
 class SignUp extends React.Component {
     state = {
         firstName: '',
+        redirect: false
     }
+
     handleChange = (event) => {
         
         const input = event.target;
@@ -14,15 +17,25 @@ class SignUp extends React.Component {
         this.setState({ [input.name]: value });
     }
 
-    handleFormSubmit = () => {
-  
-        localStorage.setItem("firstName",this.state.firstName)
-
-    };
     componentDidMount() {
         const phoneNumber = localStorage.getItem('phoneNumber') || '';
         this.setState({ phoneNumber});
     }
+
+    setRedirect = () => {
+        this.setState({
+          redirect: true
+        })
+        localStorage.setItem("firstName",this.state.firstName)
+      }
+
+      renderRedirect = () => {
+        if (this.state.redirect) {
+          return <Redirect to= "/Pages/Dashboard" />
+        }
+        
+      }
+
 
     
 
@@ -32,6 +45,7 @@ class SignUp extends React.Component {
         
         return (
             <div className="container">
+                {this.renderRedirect()}
             
                 <div className="underlay">
                     <TopMenu />
@@ -54,7 +68,7 @@ class SignUp extends React.Component {
                         <option value="canada">Eko Electric</option>
                         <option value="usa">ADEC</option>
                     </select>
-                    <NavLink to={`../Pages/Dashboard/`} ><button type="submit">Continue</button></NavLink>
+                    <button type="submit" onClick={this.setRedirect}>Continue</button>
                 </form>
             </div>
         )

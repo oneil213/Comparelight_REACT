@@ -4,7 +4,23 @@ import TopMenu from '../../TopMenu/TopMenu';
 
 class Dashboard extends React.Component{
 
-    
+    state ={
+        firstName: '',
+    }
+
+
+    componentDidMount() {
+        const firstName = localStorage.getItem('firstName') || '';
+        this.setState({ firstName});
+    }
+
+    handleChange = (event) => {
+        
+        const input = event.target;
+        const value = input.value; 
+        this.setState({ [input.name]: value });
+    }
+
     
     render() {
         
@@ -18,7 +34,7 @@ class Dashboard extends React.Component{
                   <div className="greetings">
                     <div className="row1_greetings">
                             <div><h3>Good Morning,</h3></div>
-                            <div ><h2>Adeola</h2></div>
+                            <div ><h2>{this.state.firstName}</h2></div>
 
                             </div>
                         <div class="row2_greetings">
