@@ -11,6 +11,7 @@ import LogIn from '../Pages/Login/Login';
 import Dashboard from '../Pages/Dashboard/Dashboard';
 import Recharge from '../Pages/Recharge/Recharge';
 import Data from '../Pages/Data/Data';
+import Successful from '../Pages/Successful/Successful'
 
 
 class App extends React.Component {
@@ -42,6 +43,10 @@ class App extends React.Component {
             </Route>
             <Route path="/Pages/Recharge">
               <Recharge />
+            </Route>
+
+            <Route path="/Pages/Successful">
+              <Successful />
             </Route>
             <Route path="/">
               <Home />
