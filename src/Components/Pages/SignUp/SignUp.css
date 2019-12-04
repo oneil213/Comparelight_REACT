@@ -120,7 +120,7 @@ body p{
 
 /* form styling section */
 
-.reg_form {
+.signUp_form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,11 +128,11 @@ body p{
     height: 600px;
     width: auto;
     padding: 10px;
-    margin-top: 50px;
+    margin-top: auto;
 
 }
 
-.reg_form input, select, button {
+.signUp_form input, select, button {
     padding: 15px;
   }
 
@@ -162,7 +162,7 @@ input:valid {
 
 
 
-.reg_form button {
+.signUp_form button {
   cursor: pointer;
   width: 353px;
   height: 66px;
@@ -178,7 +178,7 @@ input:valid {
 
 }
 
-.reg_form button:hover {
+.signUp_form button:hover {
   background-color: rgba(45, 178, 59, 0.7); 
 }
 
@@ -210,7 +210,7 @@ input, select{
       
   }
 
-  .reg_form button {
+  .signUp_form button {
     cursor: pointer;
     width: 285px;
     height: 53px;

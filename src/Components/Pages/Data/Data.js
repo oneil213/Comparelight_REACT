@@ -3,10 +3,45 @@ import './Data.css';
 import TopMenu from '../../TopMenu/TopMenu';
 
 class Data extends React.Component {
+
+
+    constructor(props) {
+        super(props);
+        this.state = {
+          
+            amount: '',
+            disco: '' 
+
+        };
+
+           
+    }
+
+       
+
+        componentDidMount() {
+            const data = JSON.parse(localStorage.getItem('data')) || '';
+            this.setState({ 
+                amount: data.amount, 
+                disco: data.disco,
+                meterNumber: data.meterNumber
+            });
+            
+        }
+
+
+
+
+
     render() {
+        let charge = 100.00;
+        const totalAmount =  parseFloat(this.state.amount )+ charge;
+
         return (
+            
 
             <div className="container">
+                 
         <div className="underlay">
         <TopMenu />    
         </div>
@@ -20,7 +55,7 @@ class Data extends React.Component {
                 <div className="data_content">
                     <h4>Distribution Company</h4>
                     <br/>
-                    <h3>IKEJA ELECTRIC</h3>
+                    <h3>{this.state.disco}</h3>
                 </div>
                 <div className="data_content">
                         <h4>Meter Number</h4>
@@ -55,7 +90,7 @@ class Data extends React.Component {
                 <div className="data_content">
                             <h4>Amount[₦]</h4>
                             <br/>
-                            <h3>2000</h3>
+                            <h3>{this.state.amount}</h3>
                     </div>
                 <div className="data_content">
                     <div className="tooltip">
@@ -69,7 +104,7 @@ class Data extends React.Component {
                     </div>
                 <div className="data_button">
                         <button>Back</button>
-                    <button>Pay total ₦2100</button>
+                    <button>Pay total ₦{totalAmount} </button>
                     
                 </div>
                       

@@ -1,68 +1,41 @@
 import React from 'react';
 import './PhoneNumber.css';
-import {Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router'
 
 
 class PhoneNumber extends React.Component {
 
-     
-
-    state = {
-        phoneNumber: null,
-        redirect: false
-      
+    constructor(props) {
+        super(props);
+        this.state = {phoneNumber: '', redirectToReferrer: false};
+    
+        this.handleChange = this.handleChange.bind(this);
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
     }
-
-
 
     handleChange = (event) => {
-        
-        const input = event.target;
-        const value = input.value;
-     
-        this.setState({ [input.name]: value });
+        this.setState({phoneNumber: event.target.value});
     }
 
-
-    setRedirect = () => {
-        this.setState({
-          redirect: true
-        })
-        const {phoneNumber} = this.state;
-        localStorage.setItem("phoneNumber", phoneNumber);
-      }
-
-  
-      renderRedirect = () => {
-        if (this.state.redirect) {
-          return <Redirect to= "/Pages/SignUp" />
-        }
-        
-      }
-      
-
-
-    
-
-    
-    
-    
+    handleFormSubmit(event) {
+        localStorage.setItem("phoneNumber", this.state.phoneNumber);
+        this.setState({redirectToReferrer: true});
+        event.preventDefault();
+    }
 
     render() {
-    
+        const redirectToReferrer = this.state.redirectToReferrer;
+        if (redirectToReferrer === true) {
+            return <Redirect to="/Pages/SignUp" />
+        }
         return (
-            <div>
-                 {this.renderRedirect()}
-            
-          <form  >
+          <form>
               <div className="phonebar">
-                <input type="number" name="phoneNumber" value={this.state.phoneNumber} onChange={this.handleChange}  placeholder="Enter your phone number"  required/>
-            <button className="PhoneButton" type="submit" onClick={this.setRedirect}>Continue</button>
-            
+                <input type="number" value={this.state.phoneNumber} onChange={this.handleChange} name="phoneNumber" placeholder="Enter your phone number" required/>
+                <button className="PhoneButton" onClick={this.handleFormSubmit} type="submit">Continue</button>
             </div>
 
           </form>  
-          </div>
             
         )
     }

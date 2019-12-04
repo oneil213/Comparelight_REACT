@@ -1,19 +1,36 @@
 import React from 'react';
 import './Dashboard.css';
 import TopMenu from '../../TopMenu/TopMenu';
+import { Redirect } from 'react-router'
 
 class Dashboard extends React.Component{
 
-    state ={
-        firstName: '',
+    constructor(props) {
+        super(props);
+        this.state = {
+            firstName: '',
+            meterNumber: '',
+            redirectToReferrer: false
+
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
+      
     }
 
 
-    componentDidMount() {
-        const firstName = localStorage.getItem('firstName') || '';
-        this.setState({ firstName});
-    }
+    handleFormSubmit(event){
+        var data = {
+            meterNumber: this.state.meterNumber,
+            disco: this.state.disco
+        };
+        localStorage.setItem("data",JSON.stringify(data));
+        this.setState({redirectToReferrer: true});
+        event.preventDefault();
+    };
 
+     
     handleChange = (event) => {
         
         const input = event.target;
@@ -21,8 +38,22 @@ class Dashboard extends React.Component{
         this.setState({ [input.name]: value });
     }
 
+
+    componentDidMount() {
+        const data = JSON.parse(localStorage.getItem('data')) || '';
+        this.setState({ 
+            firstName: data.firstName, 
+            meterNumber: data.meterNumber,
+            disco: data.disco
+        });
+        
+    }
     
     render() {
+        const redirectToReferrer = this.state.redirectToReferrer;
+        if (redirectToReferrer === true) {
+            return <Redirect to="/Pages/Recharge" />
+        }
         
         return (
             <div className="container">
@@ -49,7 +80,8 @@ class Dashboard extends React.Component{
                             <img src="https://res.cloudinary.com/dfszquucy/image/upload/v1574697673/meter_n0eh6y.png" alt="Prepaid meter"/>
                                     <div >
                                         <h4>Meter/Acc Number</h4>
-                                        <h5>54150686738</h5>
+                                        <h5>{this.state.meterNumber}</h5>
+                                        <h6>{this.state.disco}</h6>
                                     </div>
 
                             </div>
@@ -66,7 +98,7 @@ class Dashboard extends React.Component{
 
                                 </div>
                                 <div className="recharge_checkmeter">
-                                    <button className="recharge">Recharge</button>
+                                    <button className="recharge" onClick={this.handleFormSubmit}>Recharge</button>
                                     <button>Check Meter</button>
                                 </div>
 
