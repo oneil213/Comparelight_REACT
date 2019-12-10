@@ -29,8 +29,17 @@ class TopMenu extends React.Component {
                     <div className="login">
                       <NavLink to='/Pages/Data'><button>Data</button></NavLink>
                     </div>
+                    <div className="login">
+                      <NavLink to='/Pages/Failed'><button>Failed</button></NavLink>
+                    </div>
                     <div className="signup">
                         <NavLink to='/Pages/Successful'><button>Successful</button></NavLink>
+                      </div>
+                      <div className="signup">
+                        <NavLink to='/Pages/Transactions'><button>Transactions</button></NavLink>
+                      </div>
+                      <div className="signup">
+                        <NavLink to='/Pages/Receipt'><button>Receipts</button></NavLink>
                       </div>
                     <div className="signup">
                         <NavLink to='/Pages/SignUp'><button>Sign Up</button></NavLink>

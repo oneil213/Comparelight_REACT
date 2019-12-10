@@ -11,7 +11,10 @@ import LogIn from '../Pages/Login/Login';
 import Dashboard from '../Pages/Dashboard/Dashboard';
 import Recharge from '../Pages/Recharge/Recharge';
 import Data from '../Pages/Data/Data';
-import Successful from '../Pages/Successful/Successful'
+import Successful from '../Pages/Successful/Successful';
+import Failed from '../Pages/Failed/Failed'
+import Transactions from '../Pages/Transactions/Transactions';
+import Receipt from '../Pages/Receipt/Receipt';
 
 
 class App extends React.Component {
@@ -47,6 +50,16 @@ class App extends React.Component {
 
             <Route path="/Pages/Successful">
               <Successful />
+            </Route>
+
+            <Route path="/Pages/Failed">
+              <Failed />
+            </Route>
+            <Route path="/Pages/Transactions">
+              <Transactions/>
+            </Route>
+            <Route path="/Pages/Receipt">
+              <Receipt/>
             </Route>
             <Route path="/">
               <Home />
